@@ -39,9 +39,9 @@ namespace iot_gpio.Controllers
         /// <returns></returns>
         public IActionResult LedAc()
         {
-            //verilmiş olan pini voltaj verecek şekilde değiştiriyoruz
+            //we change the given pin to give voltage
             _gpioController.Write(LedPin, PinValue.High);
-            //kullanıcıya bilgi vermek için bir mesaj yazıyoruz.
+            //we write a message to inform the user.
             ViewBag.LedDurumu = "Led Açık!";
 
             return View("Index");
@@ -53,9 +53,9 @@ namespace iot_gpio.Controllers
         /// <returns></returns>
         public IActionResult LedKapat()
         {
-            //verilmiş olan pini voltajı kesecek şekilde değiştiriyoruz
+            //we change the given pin to cut the voltage
             _gpioController.Write(LedPin, PinValue.Low);
-            //kullanıcıya bilgi vermek için bir mesaj yazıyoruz.
+            //we write a message to inform the user.
             ViewBag.LedDurumu = "Led Kapalı!";
 
             return View("Index");

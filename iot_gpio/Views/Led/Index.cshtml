@@ -1,5 +1,5 @@
 ﻿@{
-    //kullanıcı aksiyonu sonunda bir mesaj var ise burada onu alıyoruz
+    //If there is a message at the end of the user action here we receive it
     var ledDurumu = ViewBag.LedDurumu;
 }
 <h1>Online Led Yakma Projesi</h1>
@@ -12,7 +12,7 @@
 </div>
 <br />
 @*
-    Kullanıcıya gösterilecek bir mesaj olması durumunda kullanıcıya gösteriyoruz.
+    If there is a message to be shown to the user, we show it to the user.
 *@
 @if (!string.IsNullOrEmpty(ledDurumu))
 {
